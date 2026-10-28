@@ -1,0 +1,19 @@
+{
+  "name": "steelhorse-skills",
+  "description": "Reusable Claude Code skills for game development workflows: Conventional Commits, PRs with grouped changelogs, plan-before-execute, docs sync, and Unity conventions.",
+  "owner": {
+    "name": "Gabriel Franco dos Santos Martins"
+  },
+  "plugins": [
+    {
+      "name": "steelhorse",
+      "source": "./plugins/steelhorse",
+      "description": "Core workflow skills: conventional-commits, create-pr, plan-before-execute, docs-sync."
+    },
+    {
+      "name": "steelhorse-unity",
+      "source": "./plugins/steelhorse-unity",
+      "description": "Unity conventions and safety rules, with a bundled .editorconfig. Depends on the steelhorse plugin."
+    }
+  ]
+}

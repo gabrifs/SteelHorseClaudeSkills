@@ -1,0 +1,11 @@
+{
+  "name": "steelhorse-unity",
+  "description": "Unity conventions and safety rules, with a bundled .editorconfig. Depends on the steelhorse plugin.",
+  "author": {
+    "name": "Gabriel Franco dos Santos Martins"
+  },
+  "license": "MIT",
+  "dependencies": [
+    "steelhorse"
+  ]
+}

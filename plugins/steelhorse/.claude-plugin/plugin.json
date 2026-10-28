@@ -1,0 +1,8 @@
+{
+  "name": "steelhorse",
+  "description": "Core workflow skills: conventional-commits, create-pr, plan-before-execute, docs-sync.",
+  "author": {
+    "name": "Gabriel Franco dos Santos Martins"
+  },
+  "license": "MIT"
+}
