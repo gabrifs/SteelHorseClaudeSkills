@@ -7,6 +7,8 @@ For a large project, state the scope you will check (all docs, or one area) and 
 ## Checks
 
 1. **Dead references.** For each path, file name, class or method a doc mentions, confirm it still exists (Grep/Glob). Report the ones that don't, with the doc that mentions them.
+   - **Match whole words and resolve paths in context.** A substring hit is not a match (`CharacterCreatorController` inside `PlayerCharacterCreatorController` is a different name). A partial path like `Flame/FlameConfigs` is relative to whichever folder the doc's own text implies, so search by file name before calling it missing.
+   - **Skip intentional history.** A living doc may name removed things on purpose ("renamed from X", "replaces Y", "tried and dropped"). Read the surrounding sentence; report the name only if the doc presents it as current.
 2. **Map integrity.** Every `map.md` row's code path matches something, and its doc exists. Report broken rows.
 3. **Undocumented code.** List top-level code areas (folders/systems) that no `map.md` row covers. Rank by how central they look (size, how many places reference them).
 4. **Contradictions.** Spot-check behavior claims in the docs against the code, prioritizing recently changed code (`git log` on the mapped paths since the doc last changed). Report claims the code now contradicts.
