@@ -19,7 +19,7 @@ your-project/
 | Skill | Purpose | Status |
 |---|---|---|
 | [`conventional-commits`](skills/conventional-commits/SKILL.md) | Commit messages in Conventional Commits format, no AI attribution | Ready |
-| `create-pr` | Pull requests with a grouped changelog section | Planned |
+| [`create-pr`](skills/create-pr/SKILL.md) | Pull requests with a grouped changelog section | Ready |
 | [`plan-before-execute`](skills/plan-before-execute/SKILL.md) | Propose a plan and get alignment before non-trivial work | Ready |
 | [`unity-dev`](skills/unity-dev/SKILL.md) | Unity conventions and safety rules | Ready |
 | [`docs-sync`](skills/docs-sync/SKILL.md) | Keep architecture, decisions, feature docs and README in sync with code | Ready |
