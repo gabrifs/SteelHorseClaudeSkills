@@ -42,6 +42,19 @@ Plugin skills are prefixed with the plugin name, for example `/steelhorse:create
 
 An Unreal plugin is planned.
 
+## What each skill does
+
+Claude loads a skill on its own when your request matches it. Examples of prompts that trigger them:
+
+| Skill | Try saying | What happens |
+|---|---|---|
+| `conventional-commits` | "commit my staged changes" | Reads the diff and recent history, writes a `type(scope): summary` message, splits unrelated changes into separate commits, and adds no AI attribution. |
+| `create-pr` | "open a PR for this branch" | Checks the branch and base, drafts a Conventional Commit title and a changelog grouped by commit type, asks whether to include a test plan, shows everything, and only creates the PR after you confirm. Never merges. |
+| `plan-before-execute` | "add a health pickup script" | For anything beyond a tiny edit, states a short plan (goal, steps, risks, recommendation) and waits for your go-ahead before changing files. |
+| `docs-sync` | "document the inventory system", "audit the docs" | Updates the affected docs in the same pass as the code, keeps a code-to-doc map and a decisions log, and can report drift without changing anything (audit mode). Follows an existing docs layout when there is one. |
+| `project-setup` | `/steelhorse:project-setup` | Makes sure `CLAUDE.md` exists, writes a managed block listing the skills you have installed, warns about missing companions, and offers to scaffold docs. Safe to re-run. Manual only. |
+| `unity-dev` | "write a script that rotates an object" | Follows your project's patterns, never hand-edits `.meta`, `.unity`, `.prefab` or `.csproj` files, offers the bundled `.editorconfig` if the project has none, and writes code that satisfies it. |
+
 ## Install manually (fallback)
 
 If you can't use plugins, clone the repo and copy the skill folders you want from `plugins/*/skills/` into your project's `.claude/skills/` (or `~/.claude/skills/` for every project). Copied skills use their bare names, such as `/create-pr`.
