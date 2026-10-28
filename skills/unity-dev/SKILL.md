@@ -23,6 +23,17 @@ The Unity Editor generates and manages these files. Hand-editing them corrupts r
 - **Do not assume you can compile or run.** Compiling and running happen in the Editor. After code changes, ask the user to check the Console for compile errors instead of claiming the code works.
 - Do not change `ProjectSettings/ProjectVersion.txt` or the Editor version.
 
+## EditorConfig
+
+This skill bundles a Unity-oriented `.editorconfig` at `assets/.editorconfig` (in this skill's folder). It belongs at the project root, next to `Assets/`.
+
+- **Missing:** if the project root has no `.editorconfig` (ignore the ones inside `Library/` and `Packages/`), offer to install the bundled one. Ask first and never install it silently. Warn that it may raise warnings on existing code, since it enforces naming and style rules.
+- **Already present:** never overwrite it. If the user wants the bundled rules, summarize the differences and propose a merge.
+- **Once installed, it is authoritative** for formatting and naming (indentation, braces, `var` usage, member naming, line endings). It beats my habits and the author's defaults below.
+- **Do not read it in full.** It is thousands of lines, mostly generated IDE settings. Grep for the specific rule you need (for example `dotnet_naming_rule`, `csharp_style_var`, `end_of_line`).
+- **Write compliant code.** When the file is installed, the code you write must satisfy its rules the first time (naming, explicit types vs `var`, braces, event naming, modifier order), so the IDE shows no new warnings. Grep the relevant rule before writing in an area you haven't checked. Existing code that violates a rule is not yours to rewrite; follow the rule in what you write or change.
+- **Line endings:** new files follow the `end_of_line` it sets. Check that files you create match, and fix them if not. Do not mass-convert existing files; a repo's `.gitattributes` or mixed history may already handle that.
+
 ## After you change something
 
 If the change affects documented behavior, adds a feature or system, or makes a non-obvious design decision, invoke the `docs-sync` skill (if installed) in the same pass so docs and code land together.
