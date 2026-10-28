@@ -22,7 +22,7 @@ your-project/
 | `create-pr` | Pull requests with a grouped changelog section | Planned |
 | [`plan-before-execute`](skills/plan-before-execute/SKILL.md) | Propose a plan and get alignment before non-trivial work | Ready |
 | [`unity-dev`](skills/unity-dev/SKILL.md) | Unity conventions and safety rules | Ready |
-| `docs-sync` | Keep architecture, decisions, feature docs and README in sync with code | Planned |
+| [`docs-sync`](skills/docs-sync/SKILL.md) | Keep architecture, decisions, feature docs and README in sync with code | Ready |
 
 ## License
 
