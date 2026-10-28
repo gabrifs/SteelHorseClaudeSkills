@@ -32,7 +32,7 @@ Plugin skills are prefixed with the plugin name, for example `/steelhorse:create
 | [`create-pr`](plugins/steelhorse/skills/create-pr/SKILL.md) | Pull requests with a grouped changelog; asks about a test plan; never merges | Ready |
 | [`plan-before-execute`](plugins/steelhorse/skills/plan-before-execute/SKILL.md) | Propose a plan and get alignment before non-trivial work | Ready |
 | [`docs-sync`](plugins/steelhorse/skills/docs-sync/SKILL.md) | Keep architecture, decisions, feature docs and README in sync with code | Ready |
-| `project-setup` | Write the CLAUDE.md block and scaffold docs for a new project | Planned |
+| [`project-setup`](plugins/steelhorse/skills/project-setup/SKILL.md) | Write the CLAUDE.md working-agreements block for installed skills and scaffold docs; manual (`/steelhorse:project-setup`) | Ready |
 
 ### `steelhorse-unity`
 
